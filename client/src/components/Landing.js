@@ -2,9 +2,12 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>MailPlan</h1>
-      Collect feedback from your users
+    <div className="home-hero">
+      <div>
+        <h1 style={{ fontFamily: '"Pacifico", cursive' }}>MailPlan</h1>
+        Create your own email marketing campaign and collect feedback from your
+        users
+      </div>
     </div>
   );
 };
