@@ -38,3 +38,27 @@ body {
   color: #fff;
   text-shadow: 0 0 8px #66757f;
 }
+
+/* Footer */
+footer {
+  z-index: 500;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343a40;
+  height: 3rem;
+}
+footer p {
+  text-align: center;
+  color: white;
+}
+
+/* Dashboard */
+
+.fixed-action-btn {
+  right: 30px;
+  bottom: 80px;
+}

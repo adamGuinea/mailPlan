@@ -5,8 +5,10 @@ const Landing = () => {
     <div className="home-hero">
       <div>
         <h1 style={{ fontFamily: '"Pacifico", cursive' }}>MailPlan</h1>
-        Create your own email marketing campaign and collect feedback from your
-        users
+        <p style={{ fontSize: "16px" }}>
+          Create your own email marketing campaign and collect feedback from
+          your users
+        </p>
       </div>
     </div>
   );
