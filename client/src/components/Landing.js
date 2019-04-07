@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { bounceInLeft, flipInX } from "react-animations";
-import Loader from "./Loader";
+import Loader from "../utils/Loader";
 
 const Bounce = styled.div`
   animation: 1s ${keyframes`${bounceInLeft}`} backwards 1s;
