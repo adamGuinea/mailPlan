@@ -23,13 +23,20 @@ class SurveyForm extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
+      <div className="credits">
+        <p>Please write out your recipients as a comma separated list</p>
+        <form
+          class="survey-container"
+          onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}
+        >
           {this.renderFields()}
           <Link to="/surveys" className="red btn-flat white-text">
             Cancel
           </Link>
-          <button type="submit" className="teal btn-flat right white-text">
+          <button
+            type="submit"
+            className="green accent-3 btn-flat right white-text"
+          >
             Review
             <i className="material-icons right">done</i>
           </button>

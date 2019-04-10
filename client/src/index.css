@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Bangers|Homemade+Apple|Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Bangers|Homemade+Apple|Pacifico|Montserrat");
 
 body {
   -webkit-animation-delay: 0.1s;
@@ -40,6 +40,7 @@ body {
 }
 
 /* Footer */
+
 footer {
   z-index: 500;
   position: fixed;
@@ -63,14 +64,56 @@ footer p {
   z-index: 1;
   background-color: #eff9f9;
   background-size: cover;
-  height: 920px;
+  height: 100vh;
 }
 
-.clear {
-  clear: both;
+/* CreditCheck */
+
+.dashboard .credits {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2px;
+  padding-top: 0;
+  z-index: 10;
+  height: 100%;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+  width: 100%;
+  height: 4rem;
+  background-color: #fcc7c7;
+}
+
+.credits p {
+  margin: auto;
 }
 
 .fixed-action-btn {
   right: 30px;
   bottom: 80px;
+}
+
+/* Survey Form */
+
+.survey-container {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Review Form */
+
+.survey-review {
+  /* position: relative; */
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  z-index: 1;
+  margin-top: 0;
+  background-color: #eff9f9;
+  background-size: cover;
+  height: 100vh;
 }

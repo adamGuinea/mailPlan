@@ -22,7 +22,7 @@ class SurveyNew extends Component {
   }
 
   render() {
-    return <div className="container">{this.renderContent()}</div>;
+    return <div className="dashboard">{this.renderContent()}</div>;
   }
 }
 
