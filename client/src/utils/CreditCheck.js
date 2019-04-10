@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import Loader from "./Loader";
 
 class CreditCheck extends Component {
@@ -11,14 +12,24 @@ class CreditCheck extends Component {
       return <Loader />;
     } else if (user.credits > 1) {
       creditCheck = (
-        <p>You have enough credits to begin a new marketing campaign</p>
+        <div className="credits">
+          You have enough credits to begin a new marketing campaign
+          <div className=" fixed-action-btn">
+            <Link
+              to="/surveys/new"
+              className="btn-floating btn-large red pulse"
+            >
+              <i className="large material-icons">add</i>
+            </Link>
+          </div>
+        </div>
       );
     } else {
       creditCheck = (
-        <p>
+        <div className="no-credits">
           Please add some credits to begin your new campaign using credit card
           number 4242 4242 4242 4242. Don't worry it's in test mode.
-        </p>
+        </div>
       );
     }
     return creditCheck;
