@@ -6,6 +6,7 @@ body {
   -webkit-animation-duration: 0.1s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
+  background-color: #343a40;
 }
 
 @-webkit-keyframes fontfix {
@@ -37,6 +38,20 @@ body {
   background-size: cover;
   color: #fff;
   text-shadow: 0 0 8px #66757f;
+}
+
+.scroll-icon {
+  position: absolute;
+  bottom: 10%;
+  left: 47%;
+  opacity: 0.5;
+}
+
+.section {
+  position: absolute;
+  top: 800px;
+  display: flex;
+  background-color: #d6f0fc;
 }
 
 /* Footer */

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { FETCH_USER, FETCH_SURVEYS } from "./types";
 
+// keeping my app awake
 setInterval(function() {
   axios.get("https://mailplan.herokuapp.com");
 }, 300000);
