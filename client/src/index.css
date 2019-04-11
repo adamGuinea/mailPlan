@@ -50,6 +50,7 @@ body {
 .section {
   position: absolute;
   top: 800px;
+  width: 100vw;
   display: flex;
   background-color: #d6f0fc;
 }
