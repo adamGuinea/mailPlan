@@ -47,7 +47,7 @@ class Landing extends React.Component {
 
         <section className="section">
           <div className="container">
-            <div className="row scrollspy" id="about">
+            <div className="row flex" id="about">
               <div className="col s12 m4">
                 <div className="card-panel">
                   <i className="fa fa-user fa-3x deep-purple-text text-darken-2" />
@@ -63,8 +63,8 @@ class Landing extends React.Component {
                   <i className="fa fa-database fa-3x deep-purple-text text-darken-2" />
                   <h5 className="grey-text text-darken-4">NoSQL Databases</h5>
                   <p>
-                    We use MongoDB for large volumes of structured and
-                    non-structured data.
+                    High performance, high availabilty and automatic scaling of
+                    data provided by our Mongo Database.
                   </p>
                 </div>
               </div>
@@ -73,8 +73,8 @@ class Landing extends React.Component {
                   <i className="fa fa-envelope fa-3x deep-purple-text text-darken-2" />
                   <h5 className="grey-text text-darken-4">Fast Connections</h5>
                   <p>
-                    We use SendGrid API trusted by developers and marketers for
-                    time-savings and delivery expertise.
+                    Eliminate the complexity of sending large scale corporate
+                    emails with our SendGrid API.
                   </p>
                 </div>
               </div>

@@ -53,6 +53,8 @@ body {
   width: 100vw;
   display: flex;
   background-color: #d6f0fc;
+  margin: 10px;
+  text-align: center;
 }
 
 /* Footer */
