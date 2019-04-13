@@ -85,20 +85,8 @@ class Landing extends React.Component {
     );
   }
 
-  // renderInfo() {
-  //   return (
-
-  //   );
-  // }
-
   render() {
-    return (
-      <React.Fragment>
-        {this.renderHero()}
-
-        {/* {this.renderInfo()} */}
-      </React.Fragment>
-    );
+    return <React.Fragment>{this.renderHero()}</React.Fragment>;
   }
 }
 

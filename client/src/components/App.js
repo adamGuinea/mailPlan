@@ -8,6 +8,7 @@ import Landing from "./Landing";
 import Dashboard from "./Dashboard";
 import SurveyNew from "./surveys/SurveyNew";
 import Footer from "./Footer";
+import News from "./news/News";
 
 class App extends Component {
   componentDidMount() {
@@ -21,6 +22,7 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path="/" component={Landing} />
+          <Route path="/news" component={News} />
           <Route exact path="/surveys" component={Dashboard} />
           <Route path="/surveys/new" component={SurveyNew} />
           <Footer />

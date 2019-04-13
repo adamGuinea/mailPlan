@@ -1,6 +1,6 @@
 ## MailPlan
 
-#### Demo : https://mailplan.herokuapp.com/
+#### Demo: https://mailplan.herokuapp.com/
 
 ###### Improve churn rates by gaining important customer insights.
 
@@ -38,6 +38,8 @@ MailPlan uses SendGrid to create emails and Stripe to mock payments which are re
 - Redux for state management and tracking of authenticated users, including their created surveys.
 - Uses Layout components to display public and private content depending upon user authentication state.
 - Materialize.CSS for a simplistic and responsive view.
+
+##### In Progress: Adding a news feed
 
 #### Technologies:
 
