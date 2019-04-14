@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import SingleSide from "./SingleSide";
 import Error from "./Error";
-const keys = require("../../config/keys");
 
 class SideNews extends Component {
   constructor(props) {
@@ -14,9 +13,10 @@ class SideNews extends Component {
   }
 
   componentDidMount() {
+    const API_KEY = process.env.REACT_APP_NEWS_SECRET_KEY;
     const url = `https://newsapi.org/v2/${this.props.news.type}?${
       this.props.news.query
-    }&apiKey=${process.env.NEWS_SECRET_KEY}`;
+    }&apiKey=${API_KEY}`;
     axios
       .get(url)
       .then(res => {

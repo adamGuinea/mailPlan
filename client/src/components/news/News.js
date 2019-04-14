@@ -1,7 +1,6 @@
 import React from "react";
 import NewsSingle from "./NewsSingle";
 import Error from "./Error";
-const keys = require("../../config/keys");
 
 class News extends React.Component {
   constructor(props) {
@@ -13,9 +12,10 @@ class News extends React.Component {
   }
 
   componentDidMount() {
+    const API_KEY = process.env.REACT_APP_NEWS_SECRET_KEY;
     const url = `https://newsapi.org/v2/${this.props.news.type}?${
       this.props.news.query
-    }&apiKey=${process.env.NEWS_SECRET_KEY}`;
+    }&apiKey=${API_KEY}`;
     fetch(url)
       .then(response => {
         return response.json();
