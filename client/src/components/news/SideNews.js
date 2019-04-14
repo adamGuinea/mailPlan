@@ -14,9 +14,10 @@ class SideNews extends Component {
   }
 
   componentDidMount() {
+    const apiKey = keys.newsSecretKey;
     const url = `https://newsapi.org/v2/${this.props.news.type}?${
       this.props.news.query
-    }&apiKey=${keys.newsSecretKey}`;
+    }&apiKey=${apiKey}`;
     axios
       .get(url)
       .then(res => {

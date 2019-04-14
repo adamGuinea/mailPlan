@@ -22,20 +22,3 @@ const NewsSingle = ({ item }) => (
 );
 
 export default NewsSingle;
-
-// <div className="col s12 m6 news-single">
-//     <div className="card">
-//       <div className="card-image">
-
-//         <span className="car-title">{item.source.name}</span>
-//       </div>
-//       <div className="card-content">
-//         <p>{item.title}</p>
-//       </div>
-//       <div className="card-action">
-//         <a href={item.url} target="_blank" rel="noopener noreferrer">
-//           Full article
-//         </a>
-//       </div>
-//     </div>
-//   </div>
