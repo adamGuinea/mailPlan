@@ -1,7 +1,7 @@
 import React from "react";
 import NewsSingle from "./NewsSingle";
 import Error from "./Error";
-import { API_KEY } from "./keys";
+const keys = require("../../config/keys");
 
 class News extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class News extends React.Component {
   componentDidMount() {
     const url = `https://newsapi.org/v2/${this.props.news.type}?${
       this.props.news.query
-    }&apiKey=${API_KEY}`;
+    }&apiKey=${keys.newsSecretKey}`;
     fetch(url)
       .then(response => {
         return response.json();
