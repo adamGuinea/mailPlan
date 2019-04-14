@@ -9,8 +9,27 @@ import Dashboard from "./Dashboard";
 import SurveyNew from "./surveys/SurveyNew";
 import Footer from "./Footer";
 import News from "./news/News";
+import SideNews from "./news/SideNews";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // news1: {
+      //   type: "top-headlines",
+      //   query: "sources=bbc-news"
+      // },
+      news2: {
+        type: "top-headlines",
+        query: "country=us&category=technology&language=en"
+      },
+      news3: {
+        type: "everything",
+        query: "q=marketing&language=en"
+      }
+    };
+  }
+
   componentDidMount() {
     this.props.fetchUser();
   }
@@ -18,16 +37,33 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        {/* <div className="container"> */}
-        <div>
-          <Header />
-          <Route exact path="/" component={Landing} />
-          <Route path="/news" component={News} />
-          <Route exact path="/surveys" component={Dashboard} />
-          <Route path="/surveys/new" component={SurveyNew} />
-          <Footer />
+        <Header />
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/surveys" component={Dashboard} />
+        <Route path="/surveys/new" component={SurveyNew} />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col s12 m8">
+              <Route
+                path="/news"
+                render={props => <News {...props} news={this.state.news2} />}
+              />
+              {/* <Route
+                path="/news"
+                render={props => <News {...props} news={this.state.news2} />}
+              /> */}
+            </div>
+            <div className="col m4 hide-on-small-only">
+              <Route
+                path="/news"
+                render={props => (
+                  <SideNews {...props} news={this.state.news3} />
+                )}
+              />
+            </div>
+          </div>
         </div>
-        {/* </div> */}
+        <Footer />
       </BrowserRouter>
     );
   }

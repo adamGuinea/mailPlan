@@ -45,10 +45,10 @@ class Landing extends React.Component {
           </a>
         </section>
 
-        <section className="section">
+        <section className="info-section">
           <div className="container">
-            <div className="row flex" id="about">
-              <div className="col s12 m4">
+            <div className="row" id="about">
+              <div className="col s12 m4 info">
                 <div className="card-panel">
                   <i className="fa fa-user fa-3x deep-purple-text text-darken-2" />
                   <h5 className="grey-text text-darken-4">Free Account</h5>
@@ -63,15 +63,15 @@ class Landing extends React.Component {
                   <i className="fa fa-database fa-3x deep-purple-text text-darken-2" />
                   <h5 className="grey-text text-darken-4">NoSQL Databases</h5>
                   <p>
-                    High performance, high availabilty and automatic scaling of
-                    data provided by our Mongo Database.
+                    High performance, high availability and automatic scaling of
+                    data by Mongo DB.
                   </p>
                 </div>
               </div>
               <div className="col s12 m4">
                 <div className="card-panel">
                   <i className="fa fa-envelope fa-3x deep-purple-text text-darken-2" />
-                  <h5 className="grey-text text-darken-4">Fast Connections</h5>
+                  <h5 className="grey-text text-darken-4">Easy To Use</h5>
                   <p>
                     Eliminate the complexity of sending large scale corporate
                     emails with our SendGrid API.

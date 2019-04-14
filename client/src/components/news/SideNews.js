@@ -1,13 +1,14 @@
-import React from "react";
-import NewsSingle from "./NewsSingle";
+import React, { Component } from "react";
+import axios from "axios";
+import SingleSide from "./SingleSide";
 import Error from "./Error";
 import { API_KEY } from "./keys";
 
-class News extends React.Component {
+class SideNews extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      news: [],
+      sidenews: [],
       error: false
     };
   }
@@ -16,13 +17,11 @@ class News extends React.Component {
     const url = `https://newsapi.org/v2/${this.props.news.type}?${
       this.props.news.query
     }&apiKey=${API_KEY}`;
-    fetch(url)
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
+    axios
+      .get(url)
+      .then(res => {
         this.setState({
-          news: data.articles
+          sidenews: res.data.articles
         });
       })
       .catch(error => {
@@ -34,8 +33,8 @@ class News extends React.Component {
 
   renderItems() {
     if (!this.state.error) {
-      return this.state.news.map(item => (
-        <NewsSingle key={item.url} item={item} />
+      return this.state.sidenews.map(item => (
+        <SingleSide key={item.url} item={item} />
       ));
     } else {
       return <Error />;
@@ -43,8 +42,8 @@ class News extends React.Component {
   }
 
   render() {
-    return <div className="row">{this.renderItems()}</div>;
+    return <div>{this.renderItems()}</div>;
   }
 }
 
-export default News;
+export default SideNews;
