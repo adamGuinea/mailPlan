@@ -10,22 +10,22 @@ class Header extends Component {
         return;
       case false:
         return [
-          <li key="4">
-            <a href="/news">Whats Trending</a>
-          </li>,
-          <li key="5">
+          <li key="1">
             <a href="/auth/google">Login with Google</a>
           </li>
         ];
       default:
         return [
-          <li key="1">
+          <li key="2">
             <Payments />
           </li>,
-          <li key="2" style={{ margin: "0 10px" }}>
+          <li key="3" style={{ margin: "0 10px" }}>
             Credits: {this.props.auth.credits}
           </li>,
-          <li key="3">
+          <li key="4">
+            <a href="/news">What's Trending</a>
+          </li>,
+          <li key="5">
             <a href="/api/logout">Log out</a>
           </li>
         ];
