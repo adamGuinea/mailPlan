@@ -25,7 +25,7 @@ class App extends Component {
       },
       news3: {
         type: "everything",
-        query: "q=marketing&language=en"
+        query: "q=marketing&language=en&pagesize=10"
       }
     };
   }
@@ -43,7 +43,7 @@ class App extends Component {
         <Route path="/surveys/new" component={SurveyNew} />
         <div className="container-fluid">
           <div className="row">
-            <div className="col s12 m8">
+            <div className="col s12 m9">
               <Route
                 path="/news"
                 render={props => <News {...props} news={this.state.news2} />}
@@ -53,7 +53,7 @@ class App extends Component {
                 render={props => <News {...props} news={this.state.news2} />}
               /> */}
             </div>
-            <div className="col m4 hide-on-small-only">
+            <div className="col m3  hide-on-small-only">
               <Route
                 path="/news"
                 render={props => (

@@ -43,7 +43,12 @@ class News extends React.Component {
   }
 
   render() {
-    return <div className="row">{this.renderItems()}</div>;
+    return (
+      <React.Fragment>
+        <h1 className="tech-header">Latest in tech;</h1>
+        <div className="card-group">{this.renderItems()}</div>
+      </React.Fragment>
+    );
   }
 }
 

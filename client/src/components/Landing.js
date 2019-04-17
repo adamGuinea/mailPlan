@@ -46,37 +46,35 @@ class Landing extends React.Component {
         </section>
 
         <section className="info-section">
-          <div className="container">
-            <div className="row" id="about">
-              <div className="col s12 m4 info">
-                <div className="card-panel">
-                  <i className="fa fa-user fa-3x deep-purple-text text-darken-2" />
-                  <h5 className="grey-text text-darken-4">Free Account</h5>
-                  <p>
-                    Create an account and start using MailPlan now to boost your
-                    product sales.
-                  </p>
-                </div>
+          <div className="row" id="about">
+            <div className="col s12 m4 info">
+              <div className="card small">
+                <i className="fa fa-user fa-3x deep-purple-text text-darken-2" />
+                <h5>Free Account</h5>
+                <p>
+                  Create an account and start using MailPlan now to boost your
+                  product sales.
+                </p>
               </div>
-              <div className="col s12 m4">
-                <div className="card-panel">
-                  <i className="fa fa-database fa-3x deep-purple-text text-darken-2" />
-                  <h5 className="grey-text text-darken-4">NoSQL Databases</h5>
-                  <p>
-                    High performance, high availability and automatic scaling of
-                    data by Mongo DB.
-                  </p>
-                </div>
+            </div>
+            <div className="col s12 m4 info">
+              <div className="card small">
+                <i className="fa fa-database fa-3x deep-purple-text text-darken-2" />
+                <h5>NoSQL Databases</h5>
+                <p>
+                  High performance, high availability and automatic scaling of
+                  data by Mongo DB.
+                </p>
               </div>
-              <div className="col s12 m4">
-                <div className="card-panel">
-                  <i className="fa fa-envelope fa-3x deep-purple-text text-darken-2" />
-                  <h5 className="grey-text text-darken-4">Easy To Use</h5>
-                  <p>
-                    Eliminate the complexity of sending large scale corporate
-                    emails with our SendGrid API.
-                  </p>
-                </div>
+            </div>
+            <div className="col s12 m4 info">
+              <div className="card small">
+                <i className="fa fa-envelope fa-3x deep-purple-text text-darken-2" />
+                <h5>Easy To Use</h5>
+                <p>
+                  Eliminate the complexity of sending large scale corporate
+                  emails with our SendGrid API.
+                </p>
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 import React from "react";
 
 const NewsSingle = ({ item }) => (
-  <div className="card-group">
-    <div className="col s12 m6 card">
+  <div className="col s12 m9 card ">
+    <a href={item.url} target="_blank" rel="noopener noreferrer">
       <img src={item.urlToImage} alt={item.title} style={{ width: "100%" }} />
       <div className="card-container">
         <h6>
@@ -11,13 +11,8 @@ const NewsSingle = ({ item }) => (
         <p>
           <b>{item.title}</b>
         </p>
-        <div className="card-action">
-          <a href={item.url} target="_blank" rel="noopener noreferrer">
-            Full article
-          </a>
-        </div>
       </div>
-    </div>
+    </a>
   </div>
 );
 
