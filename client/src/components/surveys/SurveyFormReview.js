@@ -10,7 +10,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     return (
       <div key={name}>
         <label>{label}</label>
-        <div>{formValues[name]}</div>
+        <div style={{ marginBottom: "10px" }}>{formValues[name]}</div>
       </div>
     );
   });
