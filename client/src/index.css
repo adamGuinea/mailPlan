@@ -33,7 +33,7 @@ body {
   background-color: #343a40;
 
   z-index: -1;
-  background-image: url("./utils/images/canvas.jpg");
+  background-image: url("./utils/images/canvasresized.jpg");
   text-align: center;
   padding: 1rem;
   background-position: center center;

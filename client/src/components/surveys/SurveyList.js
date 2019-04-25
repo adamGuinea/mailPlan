@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSurveys } from "../../actions";
+import DeleteDialog from "../Dialog";
 
 class SurveyList extends Component {
   componentDidMount() {
@@ -21,6 +22,7 @@ class SurveyList extends Component {
           <div className="card-action">
             <a>Yes: {survey.yes}</a>
             <a>No: {survey.no}</a>
+            <DeleteDialog />
           </div>
         </div>
       );
