@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchSurveys } from "../../actions";
-import DeleteDialog from "../Dialog";
+import { fetchSurveys, deleteSurvey } from "../../actions";
+import SurveyDelete from "../SurveyDelete";
 
 class SurveyList extends Component {
   componentDidMount() {
@@ -9,7 +9,7 @@ class SurveyList extends Component {
   }
 
   renderSurveys() {
-    return this.props.surveys.reverse().map(survey => {
+    return this.props.surveys.map(survey => {
       return (
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
@@ -22,7 +22,7 @@ class SurveyList extends Component {
           <div className="card-action">
             <a>Yes: {survey.yes}</a>
             <a>No: {survey.no}</a>
-            <DeleteDialog />
+            <SurveyDelete />
           </div>
         </div>
       );
@@ -34,11 +34,8 @@ class SurveyList extends Component {
   }
 }
 
-function mapStateToProps({ surveys }) {
-  return { surveys };
-}
-
+const mapStateToProps = ({ surveys }) => ({ surveys });
 export default connect(
   mapStateToProps,
-  { fetchSurveys }
+  { fetchSurveys, deleteSurvey }
 )(SurveyList);

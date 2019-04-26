@@ -18,6 +18,16 @@ module.exports = app => {
     res.send(surveys);
   });
 
+  app.delete("/api/surveys/delete/:id", async (req, res) => {
+    await Survey.deleteOne({ _id: req.params.id });
+    const surveys = await Survey.find({ _user: req.user.id })
+      .sort({ dateSent: -1 })
+      .select({
+        recipients: false
+      });
+    res.send(surveys);
+  });
+
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
     res.send("Thanks for voting!");
   });

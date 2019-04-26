@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from "react";
+import { connect } from "react-redux";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -6,12 +7,17 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Slide from "@material-ui/core/Slide";
+import { fetchSurveys, deleteSurvey } from "../actions";
 
 function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-export default class extends Component {
+class SurveyDelete extends Component {
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   state = {
     open: false
   };
@@ -22,6 +28,10 @@ export default class extends Component {
 
   handleClose = () => {
     this.setState({ open: false });
+  };
+
+  handleDelete = () => {
+    // this.props.deleteSurvey(survey._id);
   };
 
   render() {
@@ -54,7 +64,7 @@ export default class extends Component {
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleDelete} color="primary">
               Go Ahead
             </Button>
           </DialogActions>
@@ -63,3 +73,10 @@ export default class extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ surveys }) => ({ surveys });
+
+export default connect(
+  mapStateToProps,
+  { fetchSurveys, deleteSurvey }
+)(SurveyDelete);
