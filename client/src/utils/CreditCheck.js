@@ -30,7 +30,7 @@ class CreditCheck extends Component {
         <div className="credits">
           <p>
             Please add some credits to begin your new campaign using credit card
-            number 4242 4242 4242 4242. Don't worry it's in test mode.
+            number 4242 4242 4242 4242. Don't worry its in test mode.
           </p>
         </div>
       );

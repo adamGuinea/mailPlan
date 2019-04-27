@@ -14,13 +14,13 @@ function Transition(props) {
 }
 
 class SurveyDelete extends Component {
-  componentDidMount() {
-    console.log(this.props);
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+    this.handleDelete = this.handleDelete.bind(this);
   }
-
-  state = {
-    open: false
-  };
 
   handleClickOpen = () => {
     this.setState({ open: true });
@@ -31,7 +31,9 @@ class SurveyDelete extends Component {
   };
 
   handleDelete = () => {
-    // this.props.deleteSurvey(survey._id);
+    this.props.surveys.map(survey => {
+      this.props.deleteSurvey(survey._id);
+    });
   };
 
   render() {
@@ -53,11 +55,11 @@ class SurveyDelete extends Component {
           aria-describedby="alert-dialog-slide-description"
         >
           <DialogTitle id="alert-dialog-slide-title">
-            {"Are you sure?"}
+            {"Are you sure you want to delete this survey?"}
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
-              Functionality coming soon.
+              This cannot be undone.
             </DialogContentText>
           </DialogContent>
           <DialogActions>
