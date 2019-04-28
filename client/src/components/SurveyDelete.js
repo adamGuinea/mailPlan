@@ -14,13 +14,9 @@ function Transition(props) {
 }
 
 class SurveyDelete extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false
-    };
-    this.handleDelete = this.handleDelete.bind(this);
-  }
+  state = {
+    open: false
+  };
 
   handleClickOpen = () => {
     this.setState({ open: true });
@@ -31,7 +27,7 @@ class SurveyDelete extends Component {
   };
 
   handleDelete = () => {
-    this.props.surveys.map(survey => {
+    this.props.surveys.forEach(survey => {
       this.props.deleteSurvey(survey._id);
     });
   };

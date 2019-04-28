@@ -222,3 +222,10 @@ footer p {
 .section.hoverable {
   color: black;
 }
+
+/* Sidenav */
+
+.sidenav {
+  color: black;
+  max-width: 75%;
+}

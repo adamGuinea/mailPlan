@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import mail from "../utils/images/mail.jpg";
 import Payments from "./Payments";
 
 class Header extends Component {
@@ -75,7 +76,12 @@ class Header extends Component {
             className="sidenav grey lighten-2"
             id="mobile-menu"
           >
-            {this.renderContent()}
+            <li>
+              <div className="background">
+                <img src={mail} alt="mail" />
+              </div>
+            </li>
+            <div className="container">{this.renderContent()}</div>
           </ul>
         </div>
       </nav>
