@@ -14,7 +14,7 @@ class CreditCheck extends Component {
       creditCheck = (
         <div className="credits">
           <p>Click through to create a new campaign!</p>
-          <p>It will cost you 1 credit</p>
+          <p className="flow-text">It will cost you 1 credit</p>
           <div className=" fixed-action-btn">
             <Link
               to="/surveys/new"
@@ -28,7 +28,7 @@ class CreditCheck extends Component {
     } else {
       creditCheck = (
         <div className="credits">
-          <p>
+          <p className="flow-text">
             Please add some credits to begin your new campaign using credit card
             number 4242 4242 4242 4242. Don't worry it's in test mode.
           </p>
