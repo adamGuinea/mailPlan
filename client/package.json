@@ -20,6 +20,7 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
+    "compile:sass": "node-sass ./src/sass/main.scss ./src/utils/index.css -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -33,5 +34,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

@@ -1,45 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Bangers|Pacifico|Montserrat|Nanum+Gothic|Permanent+Marker");
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 
-body {
-  -webkit-animation-delay: 0.1s;
-  -webkit-animation-name: fontfix;
-  -webkit-animation-duration: 0.1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  background-color: #eff9f9;
-}
+@import "./base/base";
+@import "./base/utilities";
+@import "./base/animations";
+@import "./base/typography";
 
-@-webkit-keyframes fontfix {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@import "components/button";
+
+@import "layout/header";
+
+@import "./pages/home";
 
 /* Landing */
 
-.home-hero {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #343a40;
+// .home-hero {
+//   width: 100vw;
+//   height: 100vh;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #343a40;
 
-  z-index: -1;
-  background-image: url("./utils/images/canvasresized.jpg");
-  text-align: center;
-  padding: 1rem;
-  background-position: center center;
-  background-size: cover;
-  color: #fff;
-  text-shadow: 0 0 8px #66757f;
-}
+//   z-index: -1;
+//     background-image: url("./utils/images/canvasresized.jpg");
+//   text-align: center;
+//   padding: 1rem;
+//   background-position: center center;
+//   background-size: cover;
+//   color: #fff;
+//   text-shadow: 0 0 8px #66757f;
+// }
 
 .scroll-icon {
   position: absolute;
@@ -69,7 +64,11 @@ body {
 
 .info .card:hover {
   background-color: #b2aab7;
-  color: white;
+  color: $color-white;
+}
+
+.survey-result {
+  margin-right: 1rem;
 }
 
 /* Footer */
@@ -88,7 +87,7 @@ footer {
 
 footer p {
   text-align: center;
-  color: white;
+  color: $color-white;
 }
 
 /* Dashboard */
@@ -111,7 +110,7 @@ footer p {
   padding-top: 0;
   z-index: 10;
   height: 100%;
-  color: white;
+  color: $color-white;
   font-family: "Montserrat", sans-serif;
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
   width: 100%;

@@ -40,6 +40,7 @@ class Header extends Component {
   }
 
   render() {
+    if (window.location.pathname === "/") return null;
     return (
       <nav>
         <div className="nav-wrapper cyan darken-1">
