@@ -1,6 +1,9 @@
 import React from "react";
 import "../sass/main.scss";
 import LogoWhite from "../utils/images/logo-white.png";
+import Email1 from "../utils/images/email-1.jpeg";
+import Email2 from "../utils/images/email-2.png";
+import Email3 from "../utils/images/email-3.jpg";
 
 // import styled, { keyframes } from "styled-components";
 // import { bounceInLeft, flipInX } from "react-animations";
@@ -26,6 +29,102 @@ class Landing extends React.Component {
             </a>
           </div>
         </header>
+        <main>
+          <section className="section-about">
+            <div className="u-center-text u-margin-bottom-big">
+              <h2 className="heading-secondary">
+                Create your own marketing campaign
+              </h2>
+            </div>
+            <div className="row">
+              <div className="col-1-of-2">
+                <h3 className="heading-tertiary u-margin-bottom-small">
+                  Create an account and start using MailPlan now to boost your
+                  product sales.
+                </h3>
+                <p className="paragraph">
+                  The API allows emails to be sent to multiple email addresses
+                  and allows reply functionality once a customer clicks the
+                  Yes/No option.
+                </p>
+                <h3 className="heading-tertiary u-margin-bottom-small">
+                  High performance, high availability and automatic scaling of
+                  data by Mongo DB.
+                </h3>
+                <p className="paragraph">
+                  This is useful for tracking Surveys. Users can not only send
+                  Surveys but also track the responses they have received on a
+                  given Survey.
+                </p>
+                <a href="#" className="button-text">
+                  Learn more &rarr;
+                </a>
+              </div>
+              <div className="col-1-of-2">
+                <div className="composition">
+                  <img
+                    src={Email1}
+                    alt="Email-pic"
+                    className="composition__photo composition__photo--p1"
+                  />
+
+                  <img
+                    src={Email2}
+                    alt="Email-pic"
+                    className="composition__photo composition__photo--p2"
+                  />
+                  <img
+                    src={Email3}
+                    alt="Email-pic"
+                    className="composition__photo composition__photo--p3"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="section-features">
+            <div className="row">
+              <div className="col-1-of-4">
+                <div className="feature-box">
+                  <i className="feature-box__icon material-icons">code</i>
+                  <h3 className="heading-tertiary">
+                    MailPlan uses Stripe to mock payments
+                  </h3>
+                  <p className="feature-box__text">
+                    No real payments are accepted. Use test credit card number
+                    4242 4242 4242 4242 on the modal
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        {/* <section className="grid-test">
+          <div className="row">
+            <div className="col-1-of-2">col 1 of 2</div>
+            <div className="col-1-of-2">col 1 of 2</div>
+          </div>
+          <div className="row">
+            <div className="col-1-of-3">col 1 of 3</div>
+            <div className="col-1-of-3">col 1 of 3</div>
+            <div className="col-1-of-3">col 1 of 3</div>
+          </div>
+          <div className="row">
+            <div className="col-1-of-4">col 1 of 4</div>
+            <div className="col-1-of-4">col 1 of 4</div>
+            <div className="col-1-of-4">col 1 of 4</div>
+            <div className="col-1-of-4">col 1 of 4</div>
+          </div>
+          <div className="row">
+            <div className="col-1-of-4">col 1 of 4</div>
+            <div className="col-1-of-4">col 1 of 4</div>
+            <div className="col-2-of-4">col 2 of 4</div>
+          </div>
+          <div className="row">
+            <div className="col-1-of-4">col 1 of 4</div>
+            <div className="col-3-of-4">col 3 of 4</div>
+          </div>
+        </section> */}
       </React.Fragment>
     );
   }
