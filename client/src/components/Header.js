@@ -30,10 +30,14 @@ class Header extends Component {
             Credits: {this.props.auth.credits}
           </li>,
           <li key="4">
-            <a href="/news">What's Trending</a>
+            <a href="/news" className="nav-container">
+              What's Trending
+            </a>
           </li>,
           <li key="5">
-            <a href="/api/logout">Log out</a>
+            <a href="/api/logout" className="nav-container">
+              Log out
+            </a>
           </li>
         ];
     }
@@ -47,11 +51,11 @@ class Header extends Component {
           <Link
             to={this.props.auth ? "/surveys" : "/"}
             className="left brand-logo"
-            style={{ marginLeft: "10px" }}
+            style={{ marginLeft: "1rem" }}
           >
             <i
               className="material-icons large"
-              style={{ width: "40px", height: "40px" }}
+              style={{ width: "4rem", height: "4rem" }}
             >
               home
             </i>
@@ -82,7 +86,9 @@ class Header extends Component {
                 <img src={mail} alt="mail" />
               </div>
             </li>
-            <div className="container">{this.renderContent()}</div>
+            <div className="container nav-container">
+              {this.renderContent()}
+            </div>
           </ul>
         </div>
       </nav>

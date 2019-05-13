@@ -1,7 +1,7 @@
 import React from "react";
 
 const SingleSide = ({ item }) => (
-  <div style={{ paddingTop: "9.5px" }}>
+  <div className="side-news">
     <div className="divider" />
     <a href={item.url} target="_blank" rel="noopener noreferrer">
       <div className="section hoverable" style={{ textAlign: "center" }}>
