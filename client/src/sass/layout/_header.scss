@@ -5,10 +5,11 @@
       rgba($color-primary-light, 0.3),
       rgba($color-primary-dark, 0.8)
     ),
-    url("../utils/images/canvasresized.jpg");
+    url("../utils/images/canvas-1.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
   &__logo-box {

@@ -4,6 +4,10 @@ import LogoWhite from "../utils/images/logo-white.png";
 import Email1 from "../utils/images/email-1.jpeg";
 import Email2 from "../utils/images/email-2.png";
 import Email3 from "../utils/images/email-3.jpg";
+import Person1 from "../utils/images/person-1.jpg";
+import Person2 from "../utils/images/person-2.jpg";
+import VideoMp4 from "../utils/images/Concrete_Jungle.mp4";
+import VideoWebM from "../utils/images/Concrete_Jungle.webm";
 
 // import styled, { keyframes } from "styled-components";
 // import { bounceInLeft, flipInX } from "react-animations";
@@ -86,16 +90,246 @@ class Landing extends React.Component {
             <div className="row">
               <div className="col-1-of-4">
                 <div className="feature-box">
-                  <i className="feature-box__icon material-icons">code</i>
-                  <h3 className="heading-tertiary">
-                    MailPlan uses Stripe to mock payments
+                  <i className="feature-box__icon material-icons">
+                    credit_card
+                  </i>
+                  <h3 className="heading-tertiary u-margin-bottom-small">
+                    We use Stripe to mock payments
                   </h3>
                   <p className="feature-box__text">
-                    No real payments are accepted. Use test credit card number
-                    4242 4242 4242 4242 on the modal
+                    No real payments are accepted. Please use the test credit
+                    card provided
                   </p>
                 </div>
               </div>
+
+              <div className="col-1-of-4">
+                <div className="feature-box">
+                  <i className="feature-box__icon material-icons">
+                    {" "}
+                    shopping_cart
+                  </i>
+                  <h3 className="heading-tertiary u-margin-bottom-small">
+                    Each survey costs 1 credit{" "}
+                  </h3>
+                  <p className="feature-box__text">
+                    Once a user has enough credits they can start sending
+                    surveys
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-1-of-4">
+                <div className="feature-box">
+                  <i className="feature-box__icon material-icons">equalizer</i>
+                  <h3 className="heading-tertiary u-margin-bottom-small">
+                    Gain insight with Webhooks
+                  </h3>
+                  <p className="feature-box__text">
+                    The API allows emails to be sent to multiple email addresses
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-1-of-4">
+                <div className="feature-box">
+                  <i className="feature-box__icon material-icons">code</i>
+                  <h3 className="heading-tertiary u-margin-bottom-small">
+                    Sign up with Google
+                  </h3>
+                  <p className="feature-box__text">
+                    No need for a new password. Login and authentication is
+                    handled by Passport.JS
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="section-tech">
+            <div className="u-center-text u-margin-bottom-big">
+              <h2 className="heading-secondary">Technologies we use</h2>
+            </div>
+
+            <div className="row">
+              <div className="col-1-of-3">
+                <div className="cards">
+                  <div className="cards__side cards__side--front">
+                    <div className="cards__picture cards__picture--1">
+                      &nbsp;
+                    </div>
+                    <h4 className="cards__heading">
+                      <span className="cards__heading-span cards__heading-span--1">
+                        Mongo Database
+                      </span>
+                    </h4>
+                    <div className="cards__details">
+                      <ul>
+                        <li>Easy to scale</li>
+                        <li>Deep query ability</li>
+                        <li>Professional support</li>
+                        <li>Fast in-place updates</li>
+                        <li>No complex joins</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="cards__side cards__side--back cards__side--back-1">
+                    <div className="cards__cta">
+                      <div className="cards__price-box">
+                        <p className="cards__price-only">Yours</p>
+                        <p className="cards__price-value">Free</p>
+                      </div>
+                      <a href="#" className="button button--white">
+                        Documentation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-1-of-3">
+                <div className="cards">
+                  <div className="cards__side cards__side--front">
+                    <div className="cards__picture cards__picture--2">
+                      &nbsp;
+                    </div>
+                    <h4 className="cards__heading">
+                      <span className="cards__heading-span cards__heading-span--2">
+                        Stripe Payments
+                      </span>
+                    </h4>
+                    <div className="cards__details">
+                      <ul>
+                        <li>Great analytics and reporting</li>
+                        <li>Easy integration</li>
+                        <li>No refund charges</li>
+                        <li>Seamless checkout</li>
+                        <li>Keeps your data safe</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="cards__side cards__side--back cards__side--back-2">
+                    <div className="cards__cta">
+                      <div className="cards__price-box">
+                        <p className="cards__price-only">Yours</p>
+                        <p className="cards__price-value">Free</p>
+                      </div>
+                      <a href="#" className="button button--white">
+                        Documentation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-1-of-3">
+                <div className="cards">
+                  <div className="cards__side cards__side--front">
+                    <div className="cards__picture cards__picture--3">
+                      &nbsp;
+                    </div>
+                    <h4 className="cards__heading">
+                      <span className="cards__heading-span cards__heading-span--3">
+                        Sendgrid Webhooks
+                      </span>
+                    </h4>
+                    <div className="cards__details">
+                      <ul>
+                        <li>Pay as you go</li>
+                        <li>Rapid implementation</li>
+                        <li>Easy updates</li>
+                        <li>Automates repetitive tasks</li>
+                        <li>Lower marketing costs</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="cards__side cards__side--back cards__side--back-3">
+                    <div className="cards__cta">
+                      <div className="cards__price-box">
+                        <p className="cards__price-only">Yours</p>
+                        <p className="cards__price-value">Free</p>
+                      </div>
+                      <a href="#" className="button button--white">
+                        Documentation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="u-center-text u-margin-top-huge">
+              <a href="#" className="button button--red">
+                Login with Google
+              </a>
+            </div>
+          </section>
+
+          <section className="section-stories">
+            <div className="bg-video">
+              <video className="bg-video__content" autoPlay muted loop>
+                <source src={VideoMp4} type="video/mp4" />
+                <source src={VideoWebM} type="video/webm" />
+                Your browser is not supported!
+              </video>
+            </div>
+            <div className="u-center-text u-margin-bottom-big">
+              <h2 className="heading-secondary">Customer Testimonials</h2>
+            </div>
+            <div className="row">
+              <div className="story">
+                <figure className="story__shape">
+                  <img
+                    src={Person1}
+                    alt="person testimonial"
+                    className="story__img"
+                  />
+                  <figcaption className="story__caption">John Adams</figcaption>
+                </figure>
+                <div className="story__text">
+                  <h3 className="heading-tertiary u-margin-bottom-small">
+                    ...MailPlan who?
+                  </h3>
+                  <p>
+                    This is the first I've heard of MailPlan but if I could
+                    recommend you one tool for managing your marketing
+                    campaigns, it'd be MailPlan. It was so quick to get up and
+                    running and now I can correspond with customers in ways that
+                    used to take me hours each day.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="story">
+                <figure className="story__shape">
+                  <img
+                    src={Person2}
+                    alt="person testimonial"
+                    className="story__img"
+                  />
+                  <figcaption className="story__caption">Humphrey</figcaption>
+                </figure>
+                <div className="story__text">
+                  <h3 className="heading-tertiary u-margin-bottom-small">
+                    I really can learn new tricks
+                  </h3>
+                  <p>
+                    When I first told my friends that I was looking for a
+                    streamlined way to manage my online presence they thought I
+                    was crazy, because I'm a dog. MailPlan have been great with
+                    their support and have left me more time for the things that
+                    matter.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="u-center-text u-margin-top-huge">
+              <a href="#" className="button-text">
+                Find out more &rarr;
+              </a>
             </div>
           </section>
         </main>
