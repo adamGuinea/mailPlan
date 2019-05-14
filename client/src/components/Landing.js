@@ -8,6 +8,8 @@ import Person1 from "../utils/images/person-1.jpg";
 import Person2 from "../utils/images/person-2.jpg";
 import VideoMp4 from "../utils/images/Concrete_Jungle.mp4";
 import VideoWebM from "../utils/images/Concrete_Jungle.webm";
+import Work1 from "../utils/images/work-1.jpg";
+import Work2 from "../utils/images/work-2.jpg";
 
 // import styled, { keyframes } from "styled-components";
 // import { bounceInLeft, flipInX } from "react-animations";
@@ -64,7 +66,7 @@ class Landing extends React.Component {
                 Collect feedback from your users
               </span>
             </h1>
-            <a href="#" className="button button--white button--animated">
+            <a href="" className="button button--white button--animated">
               Discover
             </a>
           </div>
@@ -96,7 +98,7 @@ class Landing extends React.Component {
                   Surveys but also track the responses they have received on a
                   given Survey.
                 </p>
-                <a href="#" className="button-text">
+                <a href="#section-tech" className="button-text">
                   Learn more &rarr;
                 </a>
               </div>
@@ -110,12 +112,12 @@ class Landing extends React.Component {
 
                   <img
                     src={Email2}
-                    alt="Email-pic"
+                    alt="Email"
                     className="composition__photo composition__photo--p2"
                   />
                   <img
                     src={Email3}
-                    alt="Email-pic"
+                    alt="Email"
                     className="composition__photo composition__photo--p3"
                   />
                 </div>
@@ -182,7 +184,7 @@ class Landing extends React.Component {
             </div>
           </section>
 
-          <section className="section-tech">
+          <section className="section-tech" id="section-tech">
             <div className="u-center-text u-margin-bottom-big">
               <h2 className="heading-secondary">Technologies we use</h2>
             </div>
@@ -215,7 +217,7 @@ class Landing extends React.Component {
                         <p className="cards__price-only">Yours</p>
                         <p className="cards__price-value">Free</p>
                       </div>
-                      <a href="#" className="button button--white">
+                      <a href="#popup" className="button button--white">
                         Documentation
                       </a>
                     </div>
@@ -250,7 +252,7 @@ class Landing extends React.Component {
                         <p className="cards__price-only">Yours</p>
                         <p className="cards__price-value">Free</p>
                       </div>
-                      <a href="#" className="button button--white">
+                      <a href="#popup" className="button button--white">
                         Documentation
                       </a>
                     </div>
@@ -285,7 +287,7 @@ class Landing extends React.Component {
                         <p className="cards__price-only">Yours</p>
                         <p className="cards__price-value">Free</p>
                       </div>
-                      <a href="#" className="button button--white">
+                      <a href="#popup" className="button button--white">
                         Documentation
                       </a>
                     </div>
@@ -295,7 +297,7 @@ class Landing extends React.Component {
             </div>
 
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="button button--red">
+              <a href="/auth/google" className="button button--red">
                 Login with Google
               </a>
             </div>
@@ -369,6 +371,35 @@ class Landing extends React.Component {
             </div>
           </section>
         </main>
+        <div className="popup" id="popup">
+          <div className="popup__content">
+            <div className="popup__left">
+              <img src={Work1} alt="work" className="popup__img" />
+              <img src={Work2} alt="work" className="popup__img" />
+            </div>
+            <div className="popup__right">
+              <a href="#section-tech" className="popup__close">
+                &times;
+              </a>
+              <h2 className="heading-secondary .u-margin-bottom-small">
+                Open source
+              </h2>
+              <h3 className="heading-tertiary .u-margin-bottom-small">
+                Important &ndash; Please read
+              </h3>
+              <p className="popup__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                assumenda, sit nesciunt aut ad, perferendis quia obcaecati
+                temporibus suscipit inventore nobis nemo impedit dolore magnam
+                autem modi odit velit architecto!
+              </p>
+              <a href="#" className="button button--red">
+                Check it out
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* <section className="grid-test">
           <div className="row">
             <div className="col-1-of-2">col 1 of 2</div>
