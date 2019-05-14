@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.9.3",
     "axios": "^0.18.0",
     "http-proxy-middleware": "^0.19.1",
+    "live-server": "^1.2.1",
     "materialize-css": "^1.0.0",
     "react": "^16.8.4",
     "react-animations": "^1.0.0",
@@ -20,7 +21,14 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
-    "compile:sass": "node-sass ./src/sass/main.scss ./src/utils/index.css -w",
+    "watch:sass": "node-sass ./src/sass/main.scss ./src/utils/index.css -w",
+    "devserver": "live-server",
+    "startcss": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass ./src/sass/main.scss ./src/utils/comp.css",
+    "concat:css": "concat -o ./src/sass/concat.css ./src/utils/comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' ./src/sass/concat.css -o ./src/sass/prefix.css",
+    "compress:css": "node-sass ./src/sass/prefix.css ./src/utils/index.css -output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +44,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "autoprefixer": "^9.5.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2"
   }
 }

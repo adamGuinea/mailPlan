@@ -29,17 +29,20 @@
     display: table-cell;
     background-color: $color-black;
   }
+
   &__right {
     width: 66.66667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
   }
+
   &__img {
     display: block;
     width: 99%;
     background-color: $color-black;
   }
+
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -53,6 +56,7 @@
     -webkit-hyphens: auto;
     hyphens: auto;
   }
+
   // open states
   &:target {
     opacity: 1;
@@ -80,6 +84,13 @@
 
     &:hover {
       color: $color-primary;
+    }
+
+    &--outer {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: default;
     }
   }
 

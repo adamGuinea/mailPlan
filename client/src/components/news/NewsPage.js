@@ -20,10 +20,10 @@ class NewsPage extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col s12 m9">
+          <div className="col-3-of-4">
             <News news={this.state.news2} />
           </div>
-          <div className="col m3  hide-on-small-only">
+          <div className="col-1-of-4">
             <SideNews news={this.state.news3} />
           </div>
         </div>

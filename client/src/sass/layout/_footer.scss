@@ -10,7 +10,6 @@
 
   &__logo-box {
     text-align: center;
-    padding-left: 4.1rem;
     margin-bottom: 4rem;
 
     @include respond(tab-port) {
@@ -68,7 +67,8 @@
   &__copyright {
     border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
-    display: inline-block;
+    text-align: center;
+    float: right;
 
     @include respond(tab-port) {
       width: 100%;

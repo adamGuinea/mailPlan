@@ -28,10 +28,11 @@ class CreditCheck extends Component {
     } else {
       creditCheck = (
         <div className="credits">
-          <p className="flow-text">
+          <p>
             Please add some credits to begin your new campaign using credit card
-            number 4242 4242 4242 4242. Don't worry it's in test mode.
+            number 4242 4242 4242 4242.
           </p>
+          <p className="flow-text">Don't worry it's in test mode.</p>
         </div>
       );
     }

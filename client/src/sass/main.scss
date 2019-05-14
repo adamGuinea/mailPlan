@@ -22,29 +22,6 @@
 
 @import "./pages/home";
 
-/* Landing */
-
-// .home-hero {
-//   width: 100vw;
-//   height: 100vh;
-//   top: 0;
-//   left: 0;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: #343a40;
-
-//   z-index: -1;
-//     background-image: url("./utils/images/canvasresized.jpg");
-//   text-align: center;
-//   padding: 1rem;
-//   background-position: center center;
-//   background-size: cover;
-//   color: #fff;
-//   text-shadow: 0 0 8px #66757f;
-// }
-
 .nav-wrapper {
   font-size: $default-font-size;
 }
@@ -128,10 +105,8 @@
   height: 100%;
   color: color-grey-dark-2;
   font-family: "Montserrat", sans-serif;
-  // box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
   width: 100%;
   max-height: 4rem;
-  // background-color: #fcc7c7;
 }
 
 .card.darken-1 {
@@ -140,7 +115,7 @@
 
 .credits p {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: $default-font-size;
 }
 
 .fixed-action-btn {
@@ -156,6 +131,10 @@
   margin-top: 2rem;
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+label {
+  font-size: $default-font-size;
 }
 
 .survey-result {

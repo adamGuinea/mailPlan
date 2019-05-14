@@ -1,5 +1,6 @@
 import React from "react";
 import "../sass/main.scss";
+import M from "materialize-css";
 import LogoWhite from "../utils/images/logo-white.png";
 import Email1 from "../utils/images/email-1.jpeg";
 import Email2 from "../utils/images/email-2.png";
@@ -11,48 +12,54 @@ import VideoWebM from "../utils/images/Concrete_Jungle.webm";
 import Work1 from "../utils/images/work-1.jpg";
 import Work2 from "../utils/images/work-2.jpg";
 
-// import styled, { keyframes } from "styled-components";
-// import { bounceInLeft, flipInX } from "react-animations";
-// import Loader from "../utils/Loader";
+let Href = "#";
 
 class Landing extends React.Component {
+  componentDidMount() {
+    M.AutoInit();
+  }
+
+  closeNav = () => {
+    document.getElementById("navi-toggle").checked = false;
+  };
+
   renderHero() {
     return (
       <React.Fragment>
-        <div className="navigation">
+        <div className="navigation scrollspy" id="navigation">
           <input
             type="checkbox"
             className="navigation__checkbox"
             id="navi-toggle"
           />
-          <label for="navi-toggle" className="navigation__button">
+          <label htmlFor="navi-toggle" className="navigation__button">
             <span className="navigation__icon">&nbsp;</span>
           </label>
           <div className="navigation__background">&nbsp;</div>
-          <navbars className="navigation__nav">
-            <ul className="navigation__list">
+          <div className="navigation__nav">
+            <ul className="navigation__list" onClick={this.closeNav}>
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#about" className="navigation__link">
                   <span>01</span>About MailPlan
                 </a>
               </li>
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#features" className="navigation__link">
                   <span>02</span>Information
                 </a>
               </li>
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#tech" className="navigation__link">
                   <span>03</span>Tech Stack
                 </a>
               </li>
               <li className="navigation__item">
-                <a href="#" className="navigation__link">
+                <a href="#stories" className="navigation__link">
                   <span>04</span>Our Customers
                 </a>
               </li>
             </ul>
-          </navbars>
+          </div>
         </div>
 
         <header className="header">
@@ -66,8 +73,11 @@ class Landing extends React.Component {
                 Collect feedback from your users
               </span>
             </h1>
-            <a href="" className="button button--white button--animated">
-              Discover
+            <a
+              href="/auth/google"
+              className="button button--white button--animated"
+            >
+              Log in
             </a>
           </div>
         </header>
@@ -75,7 +85,7 @@ class Landing extends React.Component {
         <main>
           <section className="section-about">
             <div className="u-center-text u-margin-bottom-big">
-              <h2 className="heading-secondary">
+              <h2 className="heading-secondary scrollspy" id="about">
                 Create your own marketing campaign
               </h2>
             </div>
@@ -99,8 +109,13 @@ class Landing extends React.Component {
                   Surveys but also track the responses they have received on a
                   given Survey.
                 </p>
-                <a href="#section-tech" className="button-text">
-                  Learn more &rarr;
+                <a
+                  href="https://github.com/adamGuinea/mailPlan"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="button-text"
+                >
+                  Instructions &rarr;
                 </a>
               </div>
               <div className="col-1-of-2">
@@ -125,10 +140,10 @@ class Landing extends React.Component {
               </div>
             </div>
           </section>
-          <section className="section-features">
+          <section className="section-features scrollspy">
             <div className="row">
               <div className="col-1-of-4">
-                <div className="feature-box">
+                <div className="feature-box scrollspy" id="features">
                   <i className="feature-box__icon material-icons">
                     credit_card
                   </i>
@@ -185,12 +200,14 @@ class Landing extends React.Component {
             </div>
           </section>
 
-          <section className="section-tech" id="section-tech">
+          <section className="section-tech">
             <div className="u-center-text u-margin-bottom-big">
-              <h2 className="heading-secondary">Technologies we use</h2>
+              <h2 className="heading-secondary scrollspy" id="tech">
+                Technologies we use
+              </h2>
             </div>
 
-            <div className="row">
+            <div className="row" id="popup-target">
               <div className="col-1-of-3">
                 <div className="cards">
                   <div className="cards__side cards__side--front">
@@ -269,7 +286,7 @@ class Landing extends React.Component {
                     </div>
                     <h4 className="cards__heading">
                       <span className="cards__heading-span cards__heading-span--3">
-                        Sendgrid Webhooks
+                        SendGrid Webhooks
                       </span>
                     </h4>
                     <div className="cards__details">
@@ -313,7 +330,9 @@ class Landing extends React.Component {
               </video>
             </div>
             <div className="u-center-text u-margin-bottom-big">
-              <h2 className="heading-secondary">Customer Testimonials</h2>
+              <h2 className="heading-secondary scrollspy" id="stories">
+                Customer Testimonials
+              </h2>
             </div>
             <div className="row">
               <div className="story">
@@ -327,7 +346,7 @@ class Landing extends React.Component {
                 </figure>
                 <div className="story__text">
                   <h3 className="heading-tertiary u-margin-bottom-small">
-                    The landing page that drew me in
+                    It was the landing page that drew me in
                   </h3>
                   <p>
                     This is the first I've heard of MailPlan but if I could
@@ -355,19 +374,19 @@ class Landing extends React.Component {
                     I really can learn new tricks
                   </h3>
                   <p>
-                    When I first told my friends that I was looking for a
-                    streamlined way to manage my online presence they thought I
-                    was crazy, because I'm a dog. MailPlan have been great with
-                    their support and have left me more time for the things that
-                    matter.
+                    When I first told my friends I was looking for a streamlined
+                    way to manage my online presence they thought I was crazy,
+                    because I'm a dog lol. MailPlan have been great though and
+                    their support has left me more time for the things that
+                    really matter.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="button-text">
-                Find out more &rarr;
+              <a href="#navigation" className="button-text">
+                Back to top &uarr;
               </a>
             </div>
           </section>
@@ -379,54 +398,36 @@ class Landing extends React.Component {
               <img src={Work2} alt="work" className="popup__img" />
             </div>
             <div className="popup__right">
-              <a href="#section-tech" className="popup__close">
+              <a href="#popup-target" className="popup__close">
                 &times;
               </a>
-              <h2 className="heading-secondary .u-margin-bottom-small">
+              <h2 className="heading-secondary u-margin-bottom-small">
                 Open source
               </h2>
-              <h3 className="heading-tertiary .u-margin-bottom-small">
+              <h3 className="heading-tertiary u-margin-bottom-small">
                 Important &ndash; Please read
               </h3>
               <p className="popup__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                assumenda, sit nesciunt aut ad, perferendis quia obcaecati
-                temporibus suscipit inventore nobis nemo impedit dolore magnam
-                autem modi odit velit architecto!
+                This project has been adapted from what I learned in Jonas
+                Schmedtmann's Advanced CSS and SASS course. This page is built
+                almost entirely in SASS. The React side of this app comes from
+                what I learned in Stephen Grider's full stack React and Redux
+                courses. They have been great teachers.
               </p>
-              <a href="#" className="button button--red">
-                Check it out
+              <a
+                href="https://github.com/adamGuinea/mailPlan"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="button button--red"
+              >
+                Project repo
               </a>
             </div>
           </div>
+          <a href={Href} className="popup__close--outer">
+            &nbsp;
+          </a>
         </div>
-
-        {/* <section className="grid-test">
-          <div className="row">
-            <div className="col-1-of-2">col 1 of 2</div>
-            <div className="col-1-of-2">col 1 of 2</div>
-          </div>
-          <div className="row">
-            <div className="col-1-of-3">col 1 of 3</div>
-            <div className="col-1-of-3">col 1 of 3</div>
-            <div className="col-1-of-3">col 1 of 3</div>
-          </div>
-          <div className="row">
-            <div className="col-1-of-4">col 1 of 4</div>
-            <div className="col-1-of-4">col 1 of 4</div>
-            <div className="col-1-of-4">col 1 of 4</div>
-            <div className="col-1-of-4">col 1 of 4</div>
-          </div>
-          <div className="row">
-            <div className="col-1-of-4">col 1 of 4</div>
-            <div className="col-1-of-4">col 1 of 4</div>
-            <div className="col-2-of-4">col 2 of 4</div>
-          </div>
-          <div className="row">
-            <div className="col-1-of-4">col 1 of 4</div>
-            <div className="col-3-of-4">col 3 of 4</div>
-          </div>
-        </section> */}
       </React.Fragment>
     );
   }
@@ -437,90 +438,3 @@ class Landing extends React.Component {
 }
 
 export default Landing;
-
-// const Bounce = styled.div`
-//   animation: 1s ${keyframes`${bounceInLeft}`} backwards 1s;
-// `;
-
-// const FlipIn = styled.div`
-//   animation: 1.5s ${keyframes`${flipInX}`};
-// `;
-
-// class Landing extends React.Component {
-//   state = {
-//     loading: true
-//   };
-
-//   componentDidMount() {
-//     setTimeout(() => {
-//       this.setState({ loading: false });
-//     }, 2000);
-//   }
-
-//   renderHero() {
-//     if (this.state.loading) return <Loader />;
-//     return (
-//       <React.Fragment>
-//         <section className="home-hero">
-//           <div>
-//             <FlipIn>
-//               <h1 style={{ fontFamily: '"Pacifico", cursive' }}>MailPlan</h1>
-//             </FlipIn>
-//             <Bounce>
-//               <p style={{ fontSize: "16px" }}>
-//                 Create your own email marketing campaign and collect feedback
-//                 from your users
-//               </p>
-//             </Bounce>
-//           </div>
-//           <a href="#about" className="white-text">
-//             <i className="material-icons medium scroll-icon">
-//               arrow_drop_down_circle
-//             </i>
-//           </a>
-//         </section>
-
-//         <section className="info-section">
-//           <div className="row" id="about">
-//             <div className="col s12 m4 info">
-//               <div className="card small">
-//                 <i className="fa fa-user fa-3x deep-purple-text text-darken-2" />
-//                 <h5>Free Account</h5>
-//                 <p>
-//                   Create an account and start using MailPlan now to boost your
-//                   product sales.
-//                 </p>
-//               </div>
-//             </div>
-//             <div className="col s12 m4 info">
-//               <div className="card small">
-//                 <i className="fa fa-database fa-3x deep-purple-text text-darken-2" />
-//                 <h5>NoSQL Databases</h5>
-//                 <p>
-//                   High performance, high availability and automatic scaling of
-//                   data by Mongo DB.
-//                 </p>
-//               </div>
-//             </div>
-//             <div className="col s12 m4 info">
-//               <div className="card small">
-//                 <i className="fa fa-envelope fa-3x deep-purple-text text-darken-2" />
-//                 <h5>Easy To Use</h5>
-//                 <p>
-//                   Eliminate the complexity of sending large scale corporate
-//                   emails with our SendGrid API.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-//       </React.Fragment>
-//     );
-//   }
-
-//   render() {
-//     return <React.Fragment>{this.renderHero()}</React.Fragment>;
-//   }
-// }
-
-// export default Landing;

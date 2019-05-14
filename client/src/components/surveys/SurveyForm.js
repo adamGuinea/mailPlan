@@ -24,7 +24,9 @@ class SurveyForm extends Component {
   render() {
     return (
       <div className="credits">
-        <p>Please write out your recipients as a comma separated list</p>
+        <h2 className="heading-tertiary u-margin-bottom-small u-center-text">
+          Please write out your recipients as a comma separated list
+        </h2>
         <form
           className="survey-container"
           onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}
