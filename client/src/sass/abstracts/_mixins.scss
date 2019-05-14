@@ -12,3 +12,42 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// media queries
+
+// $breakpoint argument choices
+// phone
+// tab-port
+// tab-land
+// big-desktop
+
+// 0-600 phone
+// 600-900 tablet portrait
+// 900-1200 tablet landspace
+// 1200 - 1800 normal styles
+// 1800+ large desktop
+
+// order BASE + TYPOGRAPHY > GENERAL LAYOUT  + GRID > PAGE LAYOUT > COMPONENTS
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

@@ -82,4 +82,45 @@
       color: $color-primary;
     }
   }
+
+  @include respond(tab-port) {
+    height: 100%;
+    &__content {
+      width: 85%;
+      display: block;
+      overflow: hidden;
+    }
+
+    &__left {
+      width: 100%;
+      height: 20vh;
+    }
+
+    &__right {
+      width: 100%;
+      display: block;
+    }
+
+    &__img {
+      max-width: 50%;
+      display: block;
+      float: left;
+      object-fit: cover;
+      height: 20vh;
+    }
+
+    &__text {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+
+  @include respond(phone) {
+    &__left {
+      height: 0;
+    }
+    &__img {
+      display: none;
+    }
+  }
 }

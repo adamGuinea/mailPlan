@@ -71,6 +71,7 @@ class Landing extends React.Component {
             </a>
           </div>
         </header>
+
         <main>
           <section className="section-about">
             <div className="u-center-text u-margin-bottom-big">
@@ -326,14 +327,14 @@ class Landing extends React.Component {
                 </figure>
                 <div className="story__text">
                   <h3 className="heading-tertiary u-margin-bottom-small">
-                    ...MailPlan who?
+                    The landing page that drew me in
                   </h3>
                   <p>
                     This is the first I've heard of MailPlan but if I could
                     recommend you one tool for managing your marketing
                     campaigns, it'd be MailPlan. It was so quick to get up and
-                    running and now I can correspond with customers in ways that
-                    used to take me hours each day.
+                    running and now I can correspond with customers in a
+                    fraction of the time it used to take me each day.
                   </p>
                 </div>
               </div>
