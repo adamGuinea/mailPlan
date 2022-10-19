@@ -54,4 +54,4 @@ MailPlan uses SendGrid to create emails and Stripe to mock payments which are re
 - Hosted on Heroku
 - Google OAuth
 - Materialize CSS
-- Prod and Dev environments with http-proxy-middleware, helped to get around the CORS issues which bamboozled me a bit while building my online store
+- Prod and Dev environments with http-proxy-middleware
